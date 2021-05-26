@@ -12,7 +12,7 @@ class DatabaseService {
   CollectionReference brewCollection = FirebaseFirestore.instance.collection('brews');
   
   //add userdata
-  Future addUserData(String username, int sugars, String strength, bool milk ) async {
+  Future addUserData(String username, int sugars, String strength, String milk ) async {
     //Get uid of the current user
     final firebaseUser = auth.currentUser;
     final uid = firebaseUser.uid;
@@ -28,7 +28,7 @@ class DatabaseService {
   }
 
   //update userdata
-  Future updateUserData(String username, int sugars, String strength, bool milk) async {
+  Future updateUserData(String username, int sugars, String strength, String milk) async {
     //Get uid of the current user
     final firebaseUser = auth.currentUser;
     final uid = firebaseUser.uid;
@@ -42,5 +42,4 @@ class DatabaseService {
     }).then((value) => print("User updated"))
         .catchError((error) => print("Failed to add user: $error"));
   }
-
 }

@@ -249,7 +249,7 @@ class _RegisterFormState extends State<RegisterForm> {
                           .registerEmailPassword(email, password);
                       if (result == true) {
                         await DatabaseService()
-                            .addUserData(username, 1, 'light', false);
+                            .addUserData(username, 1, 'light', "no");
 
                         Navigator.push(
                           context,

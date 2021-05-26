@@ -28,6 +28,7 @@ class _SettingsFormState extends State<SettingsForm> {
     String _currentUsername;
     int _currentSugars;
     String _currentStrength;
+    String _currentMilk;
 
     // New
     userData.doc(uid).get().then((DocumentSnapshot document) {
@@ -35,6 +36,7 @@ class _SettingsFormState extends State<SettingsForm> {
         _currentUsername = document.data()["user_name"];
         _currentSugars = document.data()["sugars"];
         _currentStrength = document.data()["strength"];
+        _currentMilk = document.data()["milk"];
       }
     });
 
@@ -43,9 +45,17 @@ class _SettingsFormState extends State<SettingsForm> {
         elevation: 0,
         title: Text("Settings"),
       ),
-      body: FutureBuilder<DocumentSnapshot>(
+      body: FutureBuilder(
           future: userData.doc(uid).get(),
           builder: (context, snapshot) {
+            // print(snapshot.requireData);
+            if (snapshot.connectionState == ConnectionState.waiting){
+              return Center(child: CircularProgressIndicator());
+            }
+            if (snapshot.connectionState == ConnectionState.none){
+              return Center(child: Icon(Icons.wifi_off),);
+            }
+            if (snapshot.connectionState == ConnectionState.active) {}
             if (snapshot.connectionState == ConnectionState.done){
               return SingleChildScrollView(
                 child: new Padding(
@@ -143,6 +153,7 @@ class _SettingsFormState extends State<SettingsForm> {
                               }).toList(),
                             ),
                             SizedBox(height: 10),
+                            //  Roast
                             DropdownButtonFormField(
                               value: _currentStrength,
                               validator: (val) {
@@ -182,6 +193,46 @@ class _SettingsFormState extends State<SettingsForm> {
                               }).toList(),
                             ),
                             SizedBox(height: 10),
+                            //  Milk 
+                            DropdownButtonFormField(
+                              value: _currentMilk,
+                              validator: (val) {
+                                if (val == null || val.isEmpty) {
+                                  return "Please change your roast strenght";
+                                }
+                                return null;
+                              },
+                              onChanged: (val) => _currentMilk = val,
+                              decoration: InputDecoration(
+                                labelText: "Milk",
+                                hintText: "${_currentMilk}", 
+                                floatingLabelBehavior:
+                                    FloatingLabelBehavior.always,
+                                contentPadding: EdgeInsets.symmetric(
+                                    horizontal: 45, vertical: 20),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(28),
+                                  borderSide: BorderSide(color: kTextColor),
+                                  gapPadding: 10,
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(28),
+                                  borderSide: BorderSide(color: kTextColor),
+                                  gapPadding: 10,
+                                ),
+                                suffixIcon: Padding(
+                                    padding: EdgeInsets.fromLTRB(0, 20, 20, 20),
+                                    child: Icon(Icons.invert_colors)),
+                              ),
+                              items: <String>['yes', 'no']
+                                  .map<DropdownMenuItem<String>>((value) {
+                                return DropdownMenuItem<String>(
+                                  value: value,
+                                  child: Text(value),
+                                );
+                              }).toList(),
+                            ),
+                            SizedBox(height:  16.0),
                             ElevatedButton(
                               onPressed: () async {
                                 if (_formKey.currentState.validate()) {
@@ -189,8 +240,7 @@ class _SettingsFormState extends State<SettingsForm> {
                                     _currentUsername,
                                     _currentSugars,
                                     _currentStrength,
-                                    // milk 
-                                    false
+                                    _currentMilk,
                                   );
 
                                   Navigator.popUntil(
@@ -204,7 +254,7 @@ class _SettingsFormState extends State<SettingsForm> {
                                 } else {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
-                                      content: Text("Change all form values"),
+                                      content: Text("Change all formvalues"),
                                     ),
                                   );
                                 }
@@ -228,7 +278,17 @@ class _SettingsFormState extends State<SettingsForm> {
               );
             }
             //else != state.active  
-            return Text("There is no connection to the internet, please check your phone");
+            return Center(child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(Icons.wifi_off,
+                  size: 72.0,
+                ),
+                Text("There is no connection to the internet"),
+                Text("Please check your phone")
+              ],
+            ));
           }),
     );
   }

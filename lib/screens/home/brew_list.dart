@@ -33,6 +33,7 @@ class _BrewInformationState extends State<BrewInformation> {
               final username = document.data()['user_name'];
               final sugars = document.data()['sugars'];
               final strength = document.data()['strength'];
+              final milk = document.data()['milk'];
 
               return new ListTile(
                 leading: CircleAvatar(
@@ -43,8 +44,12 @@ class _BrewInformationState extends State<BrewInformation> {
                   backgroundImage: AssetImage("assets/images/coffee_icon.png"),
                 ),
                 title: new Text(username),
-                subtitle: new Text(
-                    "Takes ${sugars.toString()} sugar(s) and likes his coffee with ${strength} roast.."),
+                subtitle: Column(
+                  children: [
+                    new Text(
+                        "Takes ${sugars.toString()} sugar(s) and likes his coffee with ${strength} roast and ${valFunc.checkMilk(milk)}"),
+                  ],
+                ),
               );
             }).toList(),
           );

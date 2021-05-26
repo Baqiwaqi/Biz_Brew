@@ -1,5 +1,4 @@
-import 'dart:convert';
-
+import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 
 class Validatefunctions {
@@ -29,4 +28,12 @@ class Validatefunctions {
     }
     return true;
   }
+  
+  String checkMilk(String milk) {
+    if(milk != "no"){
+      return "and would like some milk in his coffee.";
+    }
+    return "and don't want any milk in his coffee.";
+  }
+
 }
