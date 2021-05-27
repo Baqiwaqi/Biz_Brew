@@ -89,6 +89,16 @@ class _SignFormState extends State<SignForm> {
                       borderSide: BorderSide(color: kTextColor),
                       gapPadding: 10,
                     ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(28),
+                      borderSide: BorderSide(color: Colors.red),
+                      gapPadding: 10,
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(28),
+                      borderSide: BorderSide(color: Colors.red),
+                      gapPadding: 10,
+                    ),
                     suffixIcon: Padding(
                         padding: EdgeInsets.fromLTRB(0, 20, 20, 20),
                         child: Icon(Icons.person)),
@@ -112,6 +122,16 @@ class _SignFormState extends State<SignForm> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(28),
                       borderSide: BorderSide(color: kTextColor),
+                      gapPadding: 10,
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(28),
+                      borderSide: BorderSide(color: Colors.red),
+                      gapPadding: 10,
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(28),
+                      borderSide: BorderSide(color: Colors.red),
                       gapPadding: 10,
                     ),
                     suffixIcon: Padding(

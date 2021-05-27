@@ -32,7 +32,6 @@ class DatabaseService {
     //Get uid of the current user
     final firebaseUser = auth.currentUser;
     final uid = firebaseUser.uid;
-
     //add userdata to the Firestore database
     return await brewCollection.doc(uid).update({
       'user_name' : username,

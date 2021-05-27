@@ -1,4 +1,3 @@
-import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 
 class Validatefunctions {
@@ -23,17 +22,12 @@ class Validatefunctions {
   }
 
   bool validatePassword(String password, String repeatPassword) {
-    if (password == repeatPassword) {
-      return false;
-    }
-    return true;
-  }
-  
-  String checkMilk(String milk) {
-    if(milk != "no"){
-      return "and would like some milk in his coffee.";
-    }
-    return "and don't want any milk in his coffee.";
+    return password == repeatPassword ? false : true;
   }
 
+  String checkMilk(String milk) {
+    return milk != "no"
+        ? "and would like some milk in his coffee."
+        : "and don't want any milk in his coffee.";
+  }
 }
