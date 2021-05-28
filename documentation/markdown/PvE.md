@@ -1,5 +1,3 @@
-![](RackMultipart20210528-4-25vfva_html_a0d2a3d49e8f7c5f.png)
-
 # **Programma van Eisen**
 
 _Biz Brew_
@@ -8,27 +6,23 @@ Tim Bouma
 
 05-05-2021
 
-#
 
-#
-
-#
 
 ###
 
-**[De Opdracht](#_4ksmpuwq7wsj) 1**
+**[De Opdracht](#_4ksmpuwq7wsj)**
 
-**[Functionele Requirements](#_hutbsa91lnkb) 1**
+**[Functionele Requirements](#_hutbsa91lnkb)**
 
-**[Verkregen Informatie](#_amo7h93l7bpz) 2**
+**[Verkregen Informatie](#_amo7h93l7bpz)**
 
-**[Analyse](#_bqzha59ilid) 2**
+**[Analyse](#_bqzha59ilid)**
 
-**[Conclusie](#_raqp7uxlu08c) 3**
+**[Conclusie](#_raqp7uxlu08c)**
 
-###
 
-### De Opdracht
+
+## De Opdracht
 
 Bizworx is een IT bedrijf dat zich bezighoud met het opzetten van cloud architectuur. Als bedrijf zijn ze altijd op zoek naar manieren om te groeien. Het automatiseren van werkprocessen is onderdeel waar ik mijn rol in kan vervullen. Waarbij me stagebegeleider met ideeën komt en ze vertaal in code en applicaties.
 
@@ -57,7 +51,7 @@ _Systeem_
 - Authenticatie regelen met firebase
 - Validatie van gegevens voordat dat ze worden opgeslagen in de database (nieuw)
 
-**Non-Functionele Requirements**
+### Non-Functionele Requirements
 
 _Persoonlijk_
 
@@ -81,7 +75,6 @@ Het project begint met een aantal voorbereidingen voordat we gaan beginnen met h
 
 Voor de ontwikkelomgeving moet er een Virtuele machine van een android telefoon worden gemaakt. Door het downloaden van android studio kan je hiervan gebruik maken. Vervolgens kan er een firebase project opgezet worden in de Firebase console. Hierna kan er het realiseren beginnen.
 
-![](RackMultipart20210528-4-25vfva_html_62d3a22a4e68e41b.png)
 
 Authenticatie class opzetten. Deze klasse gaat het registreren en inloggen regelen voor de applicatie. Eerst doen we een anonymous sign-in voor testen van de authenticatie. Later word dit uitgewerkt in een credentials sign-in. Naast het registreren en inloggen moet gebruiker ook kunnen uitloggen.
 
