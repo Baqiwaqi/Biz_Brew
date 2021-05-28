@@ -8,8 +8,8 @@ The project is to view the coffee preferences of your colleagues. Beside viewing
 
 ## Requirements
 
-..* Training an intern
-..* Overview of coffee preferences of the employees 
+- Training an intern
+- Overview of coffee preferences of the employees 
 
 
 ##Gettings Started
