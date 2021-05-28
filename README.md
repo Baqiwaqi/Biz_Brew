@@ -1,14 +1,14 @@
 # Biz Brew
 A Flutter Firebase project for my internship.
 
-## What the project does
+## Overview
 
 This project is a starting point for developing a Flutter Firebase application.
-The project is to view the coffee preferences of your colleagues. Beside viewing your colleagues preferences you can set your own preference coupled with our own account.
+The project is to view the coffee preferences of your colleagues. Beside viewing your colleagues preferences you can set your own preference coupled with your own account.
 
 ## Requirements
 
-- Overview of coffee prefere
+- Display coffee preferences
 - Firebase Authentication
 - Register coffee preferencences of the employees
   - Number of sugars
@@ -47,7 +47,8 @@ flutter run
 Setup Firebase project.
 
 Start with the [overview](https://firebase.flutter.dev/docs/overview) on the 
-flutterfire website. Then do a [codelab](https://firebase.google.com/codelabs/firebase-get-to-know-flutter) on the Google Platform. 
+flutterfire website. Then do a [codelab](https://firebase.google.com/codelabs/firebase-get-to-know-flutter) on the Google Platform. The Codelab will teach you
+how to setup a firebase project.
 
 ## Documentation
 
