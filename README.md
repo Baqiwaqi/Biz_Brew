@@ -4,7 +4,8 @@ A Flutter Firebase project for my internship.
 ## Overview
 
 This project is a starting point for developing a Flutter Firebase application.
-The project is to view the coffee preferences of your colleagues. Beside viewing your colleagues preferences you can set your own preference coupled with your own account.
+The project is to view the coffee preferences of your colleagues. 
+Beside viewing your colleagues preferences you can set your own preference coupled with your own account.
 
 ## Requirements
 
@@ -56,3 +57,4 @@ how to setup a firebase project.
 - [Functioneel Ontwerp](documentation/Functioneel%20Ontwerp.docx)  
 - [Kerntaak 3](documentation/Kerntaak%203.docx)
 - [kerntaak P1-K1](documentation/Kerntaak%20P1%20-%20K1.docx)
+  
