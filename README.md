@@ -53,8 +53,8 @@ how to setup a firebase project.
 
 ## Documentation
 
-- [PvE](documentation/PvE_bizbrew.docx)
-- [Functioneel Ontwerp](documentation/Functioneel%20Ontwerp.docx)  
-- [Kerntaak 3](documentation/Kerntaak%203.docx)
-- [kerntaak P1-K1](documentation/Kerntaak%20P1%20-%20K1.docx)
+- [PvE](documentation/markdown/PvE.md)
+- [Functioneel Ontwerp](documentation/markdown/functioneel_ontwerp.md)  
+- [Kerntaak 3](documentation/markdown/kerntaak_3.md)
+- [kerntaak P1-K1](documentation/markdown/P1-K1.md)
   
