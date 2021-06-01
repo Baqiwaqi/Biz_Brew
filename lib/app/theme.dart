@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'constants.dart';
 
 class AppTheme {
   static const _primaryColor = Color(0xFF0C9869);
@@ -11,15 +12,39 @@ class AppTheme {
     indent: 16.0,
   );
 
-  static const double _defaultPadding = 16.0;
-  
-  static final _elevatedButtonTheme = ElevatedButtonThemeData(
-    style: ElevatedButton.styleFrom(
-      primary: _primaryColor,
-      onPrimary: _secondaryColor,
-    )
-  );
+  // static const double _defaultPadding = 16.0;
 
+  static final _elevatedButtonTheme = ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+    primary: _primaryColor,
+    onPrimary: _secondaryColor,
+  ));
+
+  static final _inputDecorationTheme = InputDecorationTheme(
+    floatingLabelBehavior: FloatingLabelBehavior.always,
+    contentPadding: EdgeInsets.symmetric(horizontal: 45, vertical: 20),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(28),
+      borderSide: BorderSide(color: kTextColor),
+      gapPadding: 10,
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(28),
+      borderSide: BorderSide(color: kTextColor),
+      gapPadding: 10,
+    ),
+    errorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(28),
+      borderSide: BorderSide(color: Colors.red),
+      gapPadding: 10,
+    ),
+    focusedErrorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(28),
+      borderSide: BorderSide(color: Colors.red),
+      gapPadding: 10,
+    ),
+  );
+  
   static ThemeData light() {
     final textTheme = _getTextTheme(Brightness.light);
 
@@ -31,6 +56,8 @@ class AppTheme {
       primaryTextTheme: textTheme,
       dividerTheme: _dividerTheme,
       elevatedButtonTheme: _elevatedButtonTheme,
+      inputDecorationTheme: _inputDecorationTheme,
+    
     );
   }
 
@@ -46,5 +73,4 @@ class AppTheme {
       headline6: GoogleFonts.poppins(),
     );
   }
-
 }

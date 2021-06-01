@@ -24,7 +24,6 @@ class _SignInState extends State<SignIn> {
               Text(
                 "Welcome Back",
                 style: TextStyle(
-                  color: kTextColor,
                   fontSize: 25,
                 ),
               ),
@@ -76,29 +75,6 @@ class _SignFormState extends State<SignForm> {
                   decoration: InputDecoration(
                     labelText: "Email",
                     hintText: "Enter your Email ",
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 45, vertical: 20),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
                     suffixIcon: Padding(
                         padding: EdgeInsets.fromLTRB(0, 20, 20, 20),
                         child: Icon(Icons.person)),
@@ -111,29 +87,6 @@ class _SignFormState extends State<SignForm> {
                   decoration: InputDecoration(
                     labelText: "Password",
                     hintText: "Enter your password ",
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 45, vertical: 20),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
                     suffixIcon: Padding(
                         padding: EdgeInsets.fromLTRB(0, 20, 20, 20),
                         child: Icon(Icons.password)),
@@ -164,20 +117,12 @@ class _SignFormState extends State<SignForm> {
                       }
                     }
                   },
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(kPrimaryColor),
-                  ),
-                  child: Text(
-                    "Sign in",
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  child: Text("Sign in"),
                 ),
                 TextButton(
                     onPressed: () async {
                       if (email.isEmpty) {
-                        setState(() =>
-                            exception = "Enter your emailadress");
+                        setState(() => exception = "Enter your emailadress");
                       } else {
                         dynamic result =
                             await AuthService().sendPasswordResetEmail(email);

@@ -47,7 +47,7 @@ class _BrewInformationState extends State<BrewInformation> {
                 subtitle: Column(
                   children: [
                     new Text(
-                        "Takes ${sugars.toString()} sugar(s) and likes his coffee with ${strength} roast and ${valFunc.checkMilk(milk)}"),
+                        "Takes ${sugars.toString()} sugar(s) and likes his coffee with $strength roast and ${valFunc.checkMilk(milk)}"),
                   ],
                 ),
               );

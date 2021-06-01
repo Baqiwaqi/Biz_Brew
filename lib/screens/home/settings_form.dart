@@ -63,7 +63,7 @@ class _SettingsFormState extends State<SettingsForm> {
                   child: Column(
                     children: [
                       Text(
-                        "Welcome ${_currentUsername}",
+                        "Welcome $_currentUsername",
                         style: TextStyle(
                           color: kTextColor,
                           fontSize: 25,
@@ -125,7 +125,7 @@ class _SettingsFormState extends State<SettingsForm> {
                               onChanged: (val) => _currentSugars = val,
                               decoration: InputDecoration(
                                 labelText: "Sugars",
-                                hintText: "${_currentSugars} sugars",
+                                hintText: "$_currentSugars sugars",
                                 floatingLabelBehavior:
                                     FloatingLabelBehavior.always,
                                 contentPadding: EdgeInsets.symmetric(
@@ -165,7 +165,7 @@ class _SettingsFormState extends State<SettingsForm> {
                               onChanged: (val) => _currentStrength = val,
                               decoration: InputDecoration(
                                 labelText: "Roast Strength",
-                                hintText: "${_currentSugars} sugars",
+                                hintText: "$_currentSugars sugars",
                                 floatingLabelBehavior:
                                     FloatingLabelBehavior.always,
                                 contentPadding: EdgeInsets.symmetric(
@@ -205,7 +205,7 @@ class _SettingsFormState extends State<SettingsForm> {
                               onChanged: (val) => _currentMilk = val,
                               decoration: InputDecoration(
                                 labelText: "Milk",
-                                hintText: "${_currentMilk}", 
+                                hintText: "$_currentMilk", 
                                 floatingLabelBehavior:
                                     FloatingLabelBehavior.always,
                                 contentPadding: EdgeInsets.symmetric(

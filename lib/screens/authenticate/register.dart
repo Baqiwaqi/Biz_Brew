@@ -1,12 +1,11 @@
-import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:brew_crew/app/loading.dart';
 
 import 'package:brew_crew/screens/home/settings_form.dart';
 
 import 'package:brew_crew/service/authentication.dart';
 import 'package:brew_crew/service/database.dart';
 import 'package:brew_crew/service/validatefunctions.dart';
-import 'package:flutter/material.dart';
-import 'package:brew_crew/app/loading.dart';
 import '../../app/constants.dart';
 
 class Register extends StatefulWidget {
@@ -83,29 +82,6 @@ class _RegisterFormState extends State<RegisterForm> {
                   decoration: InputDecoration(
                     labelText: "Display name",
                     hintText: "Enter a display name",
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 45, vertical: 20),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
                     suffixIcon: Padding(
                         padding: EdgeInsets.fromLTRB(0, 20, 20, 20),
                         child: Icon(Icons.person)),
@@ -126,29 +102,6 @@ class _RegisterFormState extends State<RegisterForm> {
                   decoration: InputDecoration(
                     labelText: "Email",
                     hintText: "Enter an Email ",
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 45, vertical: 20),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
                     suffixIcon: Padding(
                         padding: EdgeInsets.fromLTRB(0, 20, 20, 20),
                         child: Icon(Icons.mail)),
@@ -161,29 +114,6 @@ class _RegisterFormState extends State<RegisterForm> {
                   decoration: InputDecoration(
                     labelText: "Password",
                     hintText: "Enter a password ",
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 45, vertical: 20),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
                     suffixIcon: Padding(
                         padding: EdgeInsets.fromLTRB(0, 20, 20, 20),
                         child: Icon(Icons.password)),
@@ -201,29 +131,6 @@ class _RegisterFormState extends State<RegisterForm> {
                   decoration: InputDecoration(
                     labelText: "Password Check",
                     hintText: "Repeat your password",
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 45, vertical: 20),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: kTextColor),
-                      gapPadding: 10,
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      borderSide: BorderSide(color: Colors.red),
-                      gapPadding: 10,
-                    ),
                     suffixIcon: Padding(
                       padding: EdgeInsets.fromLTRB(0, 10, 10, 10),
                       child: IconButton(
@@ -265,13 +172,8 @@ class _RegisterFormState extends State<RegisterForm> {
                       }
                     }
                   },
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(kPrimaryColor),
-                  ),
                   child: Text(
                     "Register",
-                    style: TextStyle(color: Colors.white),
                   ),
                 ),
                 Center(
