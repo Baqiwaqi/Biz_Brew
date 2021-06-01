@@ -25,10 +25,7 @@ class _RegisterState extends State<Register> {
             children: [
               Text(
                 "Welcome to BizBrew ",
-                style: TextStyle(
-                  color: kTextColor,
-                  fontSize: 25,
-                ),
+                style: TextStyle(fontSize: 25),
               ),
               Text(
                 "To continue register with an email and password",

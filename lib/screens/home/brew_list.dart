@@ -11,7 +11,6 @@ class BrewInformation extends StatefulWidget {
 
 class _BrewInformationState extends State<BrewInformation> {
   final valFunc = Validatefunctions();
-
   final collections = DatabaseService();
 
   @override
@@ -38,8 +37,7 @@ class _BrewInformationState extends State<BrewInformation> {
               return new ListTile(
                 leading: CircleAvatar(
                   radius: 24.0,
-                  // added function: avatar colro changes
-                  // based on the roast strength
+                  // added function: avatar color based on sterngth
                   backgroundColor: valFunc.coffeeColor(strength),
                   backgroundImage: AssetImage("assets/images/coffee_icon.png"),
                 ),

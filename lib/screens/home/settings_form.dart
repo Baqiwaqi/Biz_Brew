@@ -65,7 +65,6 @@ class _SettingsFormState extends State<SettingsForm> {
                       Text(
                         "Welcome $_currentUsername",
                         style: TextStyle(
-                          color: kTextColor,
                           fontSize: 25,
                         ),
                       ),
@@ -89,20 +88,6 @@ class _SettingsFormState extends State<SettingsForm> {
                               // decoration
                               decoration: InputDecoration(
                                 labelText: "Username",
-                                floatingLabelBehavior:
-                                    FloatingLabelBehavior.always,
-                                contentPadding: EdgeInsets.symmetric(
-                                    horizontal: 45, vertical: 20),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(28),
-                                  borderSide: BorderSide(color: kTextColor),
-                                  gapPadding: 10,
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(28),
-                                  borderSide: BorderSide(color: kTextColor),
-                                  gapPadding: 10,
-                                ),
                                 suffixIcon: Padding(
                                   padding: EdgeInsets.fromLTRB(0, 20, 20, 20),
                                   child: SvgPicture.asset(
@@ -126,20 +111,6 @@ class _SettingsFormState extends State<SettingsForm> {
                               decoration: InputDecoration(
                                 labelText: "Sugars",
                                 hintText: "$_currentSugars sugars",
-                                floatingLabelBehavior:
-                                    FloatingLabelBehavior.always,
-                                contentPadding: EdgeInsets.symmetric(
-                                    horizontal: 45, vertical: 20),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(28),
-                                  borderSide: BorderSide(color: kTextColor),
-                                  gapPadding: 10,
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(28),
-                                  borderSide: BorderSide(color: kTextColor),
-                                  gapPadding: 10,
-                                ),
                                 suffixIcon: Padding(
                                     padding: EdgeInsets.fromLTRB(0, 20, 20, 20),
                                     child: Icon(Icons.cake)),
@@ -166,20 +137,6 @@ class _SettingsFormState extends State<SettingsForm> {
                               decoration: InputDecoration(
                                 labelText: "Roast Strength",
                                 hintText: "$_currentSugars sugars",
-                                floatingLabelBehavior:
-                                    FloatingLabelBehavior.always,
-                                contentPadding: EdgeInsets.symmetric(
-                                    horizontal: 45, vertical: 20),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(28),
-                                  borderSide: BorderSide(color: kTextColor),
-                                  gapPadding: 10,
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(28),
-                                  borderSide: BorderSide(color: kTextColor),
-                                  gapPadding: 10,
-                                ),
                                 suffixIcon: Padding(
                                     padding: EdgeInsets.fromLTRB(0, 20, 20, 20),
                                     child: Icon(Icons.brightness_high)),
@@ -206,20 +163,6 @@ class _SettingsFormState extends State<SettingsForm> {
                               decoration: InputDecoration(
                                 labelText: "Milk",
                                 hintText: "$_currentMilk", 
-                                floatingLabelBehavior:
-                                    FloatingLabelBehavior.always,
-                                contentPadding: EdgeInsets.symmetric(
-                                    horizontal: 45, vertical: 20),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(28),
-                                  borderSide: BorderSide(color: kTextColor),
-                                  gapPadding: 10,
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(28),
-                                  borderSide: BorderSide(color: kTextColor),
-                                  gapPadding: 10,
-                                ),
                                 suffixIcon: Padding(
                                     padding: EdgeInsets.fromLTRB(0, 20, 20, 20),
                                     child: Icon(Icons.invert_colors)),

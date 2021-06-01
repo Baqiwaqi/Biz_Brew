@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'constants.dart';
 
 class AppTheme {
   static const _primaryColor = Color(0xFF0C9869);
   static const _secondaryColor = Color(0xFFF9F8FD);
-  // static const  _textColor = Color(0xFF3C4046);
+  static const  _textColor = Color(0xFF3C4046);
 
   static const _dividerTheme = DividerThemeData(
     space: 0.0,
@@ -25,12 +24,12 @@ class AppTheme {
     contentPadding: EdgeInsets.symmetric(horizontal: 45, vertical: 20),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(28),
-      borderSide: BorderSide(color: kTextColor),
+      borderSide: BorderSide(color: _textColor),
       gapPadding: 10,
     ),
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(28),
-      borderSide: BorderSide(color: kTextColor),
+      borderSide: BorderSide(color: _textColor),
       gapPadding: 10,
     ),
     errorBorder: OutlineInputBorder(
@@ -44,7 +43,7 @@ class AppTheme {
       gapPadding: 10,
     ),
   );
-  
+
   static ThemeData light() {
     final textTheme = _getTextTheme(Brightness.light);
 
