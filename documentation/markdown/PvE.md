@@ -47,8 +47,8 @@ _Gebruiker_
 
 _Systeem_
 
-- Realtime weergeven van gegevens met een firestore database
-- Authenticatie regelen met firebase
+- Firebase Firestore database
+- Firebase authenticatie
 - Validatie van gegevens voordat dat ze worden opgeslagen in de database (nieuw)
 
 ### Non-Functionele Requirements
@@ -58,7 +58,7 @@ _Persoonlijk_
 - Opzetten van een project
   - Ontwikkelomgeving (VM)
   - Documentatie
-  - Git workflow
+  - Git workflow (GitHub)
 - Leren van de Flutter fundamentals
 - Service van Firebase beheersen
 - Hanteren van Github voor het archiveren en versiebeheer van de code (nieuw)

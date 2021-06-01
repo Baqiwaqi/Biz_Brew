@@ -10,11 +10,12 @@ Beside viewing your colleagues preferences you can set your own preference coupl
 ## Requirements
 
 - Display coffee preferences
-- Firebase Authentication
 - Register coffee preferencences of the employees
   - Number of sugars
   - Coffee strength
   - Milk or no milk (new)
+- Firebase Firestore database
+- Firebase Authentication
 - Password Reset (new)
 - Connectivity control (new)
 
