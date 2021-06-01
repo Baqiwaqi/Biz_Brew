@@ -16,15 +16,35 @@ class Authenticate extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Center(
               child: Text(
                 "Welcome to BizBrew",
                 style: TextStyle(
-                  fontSize: 24.0,
+                  fontSize: 32.0,
                 ),
               ),
+            ),
+            SizedBox(height: 32.0,),
+            // Bizworx Logo
+            PhysicalModel(
+              elevation: 32.0,
+              shape: BoxShape.circle,
+              // shadowColor: Colors.white,
+              color: Colors.transparent,
+              borderRadius: BorderRadius.all(Radius.circular(16.0)),
+              child: Container(
+                height: 160.0,
+                width: 160.0,
+                // color: Colors.blue,
+                child: Image(
+                  image: AssetImage('assets/images/icon-logo.png'),
+                ),
+              ),
+            ),
+            SizedBox(
+              
             ),
             Row(
               children: [
@@ -61,4 +81,3 @@ class Authenticate extends StatelessWidget {
     );
   }
 }
-

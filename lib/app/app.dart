@@ -1,6 +1,7 @@
-import 'package:brew_crew/app/constants.dart';
-import 'package:brew_crew/app/landing_page.dart';
 import 'package:flutter/material.dart';
+import 'package:brew_crew/app/landing_page.dart';
+import 'package:brew_crew/app/theme.dart';
+
 
 
 class MyApp extends StatelessWidget {
@@ -9,11 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'BizBrew',
-      theme: ThemeData(
-        primaryColor: kPrimaryColor,
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: AppTheme.light(),
       home: LandingPage(),
     );
   }
