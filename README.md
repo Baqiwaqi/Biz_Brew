@@ -21,7 +21,7 @@ Beside viewing your colleagues preferences you can set your own preference coupl
 
 ## Gettings Started
 
-a few resources to get you started if this is your:
+A few resources to get you started:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
